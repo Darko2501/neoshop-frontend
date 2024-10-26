@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Link from "next/link";
 import { useAuth } from '@/context/AuthContext';
 
@@ -8,7 +8,6 @@ export default function Navbar() {
     return (
         <nav className="bg-black p-4">
             <div className="flex justify-between items-center text-white">
-
                 <ul className="flex space-x-4">
                     <li>
                         <Link href="/">Home</Link>
@@ -24,14 +23,13 @@ export default function Navbar() {
                     </li>
                 </ul>
 
-
                 <ul className="flex space-x-4">
                     <li>
                         <Link href="/register">Register</Link>
                     </li>
                     <li>
                         {isAuthenticated ? (
-                            <span>{username}</span>
+                            <Link href="/profile">{username}</Link> // Prikazuje korisničko ime
                         ) : (
                             <Link href="/profile">Profile</Link>
                         )}
