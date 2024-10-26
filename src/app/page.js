@@ -28,6 +28,7 @@ export default function HomePage() {
         <div className="flex min-h-screen">
             <CategorySidebar onCategorySelect={setSelectedCategory} />
             <main className="w-3/4 p-4 min-h-screen">
+                <h1 className="text-4xl font-bold text-center my-6">NEO STORE</h1>
                 <h2 className="font-bold text-xl mb-4">
                     {selectedCategory ? "Filtered Products" : "All Products"}
                 </h2>
